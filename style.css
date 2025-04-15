@@ -68,17 +68,21 @@ div.container-fluid {
 }
 
 .home-img img {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 50%;
     border: 10px solid aqua;
     box-shadow: 0 0 25px aqua;
     cursor: pointer;
     transition: 0.3s linear;
+    display: block;
 }
+
+
 .Icons a {
-    font-size: 2rem; /* icon + text size */
+    font-size: 2rem; 
     text-decoration: none;
     color: white;
     display: inline-flex;
@@ -109,7 +113,9 @@ div.container-fluid {
     border-radius: 10px;
     font-size: 3rem;
     font-family: 'Poppins', sans-serif;
+    max-width: 100%;
 }
+
 
 .card-title {
     font-size: 2rem;
