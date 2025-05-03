@@ -29,7 +29,6 @@
                 </a>
             </div>
         </div>
-       
     </section>
 
     <div class="Activities">
@@ -37,52 +36,30 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card" style="max-width: 30rem;">
-                    <img src="img/redmagic9pro.jpg" class="card-img-top rounded-4" alt="..." >
-                    <div class="card-body">
-                        <h5 class="card-title">REDMAGIC 9 PRO</h5>
-                        <p class="card-text"></p>
-                        <a href="A04/index.html" class="btn btn-primary btn-lg">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="max-width: 30rem;">
-                    <img src="img/bagui3.jpg" class="card-img-top rounded-4" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Baguio City</h5>
-                        <p class="card-text"></p>
-                        <a href="A05/index.html" class="btn btn-primary btn-lg">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="max-width: 30rem;">
-                    <img src="./A06/img/galler.png" class="card-img-top rounded-4" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Gallery</h5>
-                        <p class="card-text"></p>
-                        <a href="A06/index.html" class="btn btn-primary btn-lg">View Project</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card" style="max-width: 30rem;">
-                    <img src="img/dbz.png" class="card-img-top rounded-4" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">DBZ API</h5>
-                        <p class="card-text"></p>
-                        <a href="A07/index.html" class="btn btn-primary btn-lg">View Project</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
+        <div class="row" id="container-row">
+
+            <script>
+                var projects = ["REDMAGIC 9 PRO", "Baguio City", "Gallery", "DBZ API", "", "",];
+                var pictures = ["img/redmagic9pro.jpg", "img/bagui3.jpg", "./A06/img/galler.png", "img/dbz.png",]
+                var buttons = ["A04/index.html", "A05/index.html", "A06/index.html", "A07/index.html", "", "",]
+
+                var rowElement = document.getElementById("container-row");
+                for (var i = 0; i < projects.length; i++) {
+                    rowElement.innerHTML += '<div class="col-md-4 mb-4">' +
+                        '<div class="card" style="max-width: 30rem;">' +
+                        '<img src="' + pictures[i] + '" class="card-img-top rounded-4" alt="">' +
+                        '<div class="card-body">' +
+                        '<h5 class="card-title">' + projects[i] + '</h5>' +
+                        '<a href="' + buttons[i] + '" class="btn btn-primary btn-lg">View Project</a>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+                }
+
+            </script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+                crossorigin="anonymous"></script>
 </body>
 
 </html>
