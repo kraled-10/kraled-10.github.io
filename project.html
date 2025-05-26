@@ -27,37 +27,40 @@
             justify-content: space-between;
             align-items: center;
             background-color: #1f2833;
-            z-index: 1040;
+            z-index: 100;
         }
 
-        .logo {
+        .navbar .logo {
             font-size: 30px;
             font-weight: 700;
-            color: #66fcf1 !important;
+            color: #66fcf1;
         }
 
-        .navbar-nav {
+        .navbar ul {
             display: flex;
             margin-bottom: 0;
-            gap: 35px;
         }
 
-        .navbar-nav .nav-item {
+        .navbar ul li {
             list-style: none;
+            margin-left: 35px;
         }
 
-        .navbar-nav .nav-link {
+        .navbar ul li a {
             font-size: 20px;
             font-weight: 500;
-            color: #c5c6c7;
             transition: 0.5s;
+            color: inherit;
         }
 
-        .navbar-nav .nav-link.active,
-        .navbar-nav .nav-link:hover {
+        .navbar ul li:hover a {
+            color: #66fcf1;
+        }
+
+        .navbar .nav-link:hover,
+        .navbar .nav-link.active {
             color: #66fcf1 !important;
         }
-
 
         .container {
             padding: 120px 15px 30px;
